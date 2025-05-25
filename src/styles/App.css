@@ -10,21 +10,36 @@
 .app-header {
   background-color: #2c3e50;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 60px;
+  height: 70px;
   z-index: 1000;
 }
 
-.app-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
+.header-left {
+  flex: 0 0 auto;
 }
 
-.app-header nav ul {
+.header-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 2rem;
+}
+
+.header-right {
+  flex: 0 0 auto;
+}
+
+.header-right ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -32,13 +47,8 @@
   gap: 2rem;
 }
 
-.app-header nav li {
+.header-right li {
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.app-header nav li:hover {
-  color: #3498db;
 }
 
 .app-header nav a {
@@ -49,6 +59,51 @@
 
 .app-header nav a:hover {
   color: #3498db;
+}
+
+.search-container {
+  width: 100%;
+}
+
+.search-container form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-container input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-container button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-container button:hover {
+  background-color: #2980b9;
 }
 
 .content-container {
@@ -77,6 +132,24 @@
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .header-center {
+    margin: 1rem 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  .header-right ul {
+    gap: 1rem;
+  }
 }
 
 @keyframes App-logo-spin {
