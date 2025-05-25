@@ -9,7 +9,7 @@ import 'leaflet/dist/leaflet.css';
 import iconBlue from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-// Criando um ícone vermelho para o usuário
+// Criando o ícone vermelho para o usuário
 const redIcon = L.icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
   shadowUrl: iconShadow,
@@ -19,7 +19,7 @@ const redIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-// Criando um ícone azul para os pontos de ônibus
+// Criando o ícone azul para os pontos de ônibus
 const blueIcon = L.icon({
   iconUrl: iconBlue,
   shadowUrl: iconShadow,
